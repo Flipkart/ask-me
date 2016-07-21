@@ -35,7 +35,7 @@ function getProductTitle() {
 }
 
 function renderSearchResults(res, status, xhr, form) {
-  $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).html( JSON.stringify(res) );
+  $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).html( res.answer);
 }
 
 showSearchButton();

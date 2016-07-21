@@ -10,16 +10,13 @@
     "default_popup": "popup.html",
     "default_title": "V1"
   },
-//  "permissions": [
-//    "activeTab",
-//    "https://ajax.googleapis.com/"
-//  ]
 
   "content_scripts": [
     {
       "matches": ["http://www.flipkart.com/*"],
       "css": ["mystyles.css"],
-      "js": ["jquery.js","jquery.form.js", "myscript.js"]
+      "js": ["jquery.js","jquery.form.js", "myscript.js"],
+      "include_globs": ["*www.flipkart.com/*/p/*?*pid=*"]
     }
   ],
   "web_accessible_resources": [
