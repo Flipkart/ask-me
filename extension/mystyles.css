@@ -1,0 +1,8 @@
+div#searchDiv {
+  position: absolute;
+  left: 80%;
+  top: 120px;
+  border: 1px solid grey;
+  background: lightgrey;
+  padding: 2px;
+}
