@@ -1,13 +1,17 @@
+var SEARCH_DIV = 'searchDiv';
+
 function showSearchButton() {
-  var searchDiv = $("<div></div>").attr('id','searchDiv').appendTo('#fk-mainbody-id .fk-content');
+  var searchDiv = $("<div></div>").attr('id',SEARCH_DIV).appendTo('#fk-mainbody-id .fk-content');
   $.get(chrome.extension.getURL('/templates/search_div.html'), function(data) {
-    $($.parseHTML(data)).appendTo('#searchDiv');
+    $($.parseHTML(data)).appendTo('#'+SEARCH_DIV);
     setupForm();
 
   });
 }
 
 showSearchButton();
+
+
 
 function getProductTitle() {
   var productTitle = $('.product-details .title-wrap h1')[0];
@@ -21,5 +25,6 @@ function setupForm() {
 
 function renderSearchResults(res, status, xhr, form) {
   console.log(res);
+  $("#" + SEARCH_DIV).append(document.createTextNode( JSON.stringify(res) ));
 
 }
