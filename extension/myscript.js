@@ -7,10 +7,13 @@ function showSearchButton() {
   $.get(chrome.extension.getURL('/templates/search_div.html'), function(data) {
     $($.parseHTML(data)).appendTo('#'+SEARCH_DIV);
     searchDiv.find("#submit").on('click', searchSubmitHandler);
+    animateSearchResults();
   });
 }
 
 function searchSubmitHandler(event){
+  $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).html( "&nbsp;");
+
   var data = {
     "product_name" : getProductTitle(),
     "query" : $("#"+ SEARCH_DIV + " #search_input").val()
@@ -30,12 +33,20 @@ function searchSubmitHandler(event){
 
 function getProductTitle() {
   var productTitle = $('.product-details .title-wrap h1')[0];
-  console.log(productTitle.innerHTML);
   return productTitle.innerHTML;
 }
 
 function renderSearchResults(res, status, xhr, form) {
+  $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).show();
   $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).html( res.answer);
+}
+
+
+function animateSearchResults() {
+  $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).click(function() {
+    $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_CLASS).slideUp( "fast", function() {
+    });
+  });
 }
 
 showSearchButton();

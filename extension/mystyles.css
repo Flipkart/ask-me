@@ -2,7 +2,53 @@ div#searchDiv {
   position: absolute;
   left: 80%;
   top: 120px;
-  border: 1px solid grey;
-  background: lightgrey;
-  padding: 2px;
+  width: 220px;
+}
+
+.rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+.rcorners2 {
+  border-radius: 7px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #006cb4;
+  padding: 10px;
+  background-color: #0277cc;}
+
+
+.review_search_button {
+  background-color: #fdd922;
+  border: 1px solid #e0bc27;
+  border-radius: 0 2px 2px 0;
+  text-transform: uppercase;
+  color: #565656;
+  position: absolute;
+  line-height: 17px;
+  height: 34px;
+  cursor: pointer;
+  width: 30%;
+  appearance: button;
+  -moz-appearance: button;
+  -webkit-appearance: button;
+}
+.review_search_bar{
+  border: 0 none;
+  outline: 0 none;
+  height: 15px;
+  width: 60%;
+  border-radius: 2px 0 0 2px;
+  padding: 10px 1% 9px 6%;
+  font-size: 13px;
+}
+
+.review_search_response{
+  background-color: wheat;
+  margin-top: 10px;
+  padding: 5px;
 }
