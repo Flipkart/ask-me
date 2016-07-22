@@ -1,8 +1,9 @@
 div#searchDiv {
   position: absolute;
-  left: 80%;
-  top: 120px;
+  left: 78%;
+  top: 125px;
   width: 220px;
+  opacity: 0.5;
 }
 
 .rcorners1 {
@@ -48,7 +49,22 @@ div#searchDiv {
 }
 
 .review_search_response{
+  padding: 5px;
+}
+
+.search_response_wrapper{
   background-color: wheat;
   margin-top: 10px;
-  padding: 5px;
+}
+
+.scroll_button_wrapper{
+  text-align: center;
+  font-size: 15px;
+}
+
+.scroll_button{
+  width: 40px;
+  margin: 0 auto;
+  background-color: #0277cc;
+  border-radius: 3px 3px 0px 0px;
 }
