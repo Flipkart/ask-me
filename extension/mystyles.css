@@ -69,6 +69,12 @@ div#searchDiv {
   margin: 0 auto;
   background-color: #0277cc;
   border-radius: 3px 3px 0px 0px;
+  color:#444;
+}
+
+.scroll_button:hover{
+  color: #000;
+  cursor: pointer;
 }
 
 .review_search_response .highlight{
