@@ -15,7 +15,7 @@
     {
       "matches": ["http://www.flipkart.com/*"],
       "css": ["mystyles.css", "css/font-awesome.css"],
-      "js": ["jquery.js","jquery.form.js", "myscript.js"],
+      "js": ["jquery.js","jquery.form.js", "myscript.js", "jquery.highlight-5.js"],
       "include_globs": ["*www.flipkart.com/*/p/*?*pid=*"]
     }
   ],

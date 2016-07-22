@@ -70,3 +70,8 @@ div#searchDiv {
   background-color: #0277cc;
   border-radius: 3px 3px 0px 0px;
 }
+
+.review_search_response .highlight{
+  font-weight: bold;
+  background-color: rgb(230, 204, 168);
+}

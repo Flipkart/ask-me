@@ -48,7 +48,7 @@ function getProductTitle() {
 }
 
 function renderSearchResults(res, status, xhr, form) {
-  animateResultValue(res.answer);
+  animateResultValue(res);
 }
 
 
@@ -64,12 +64,14 @@ function slideUpResult(){
   });
 }
 
-function animateResultValue(newValue){
+function animateResultValue(res){
   $("#" + SEARCH_DIV + " ." + SEARCH_RESPONSE_WRAPPER).fadeOut(200, function() {
-    $(this).find("." + SEARCH_RESPONSE_CLASS).text(newValue);
+    $(this).find("." + SEARCH_RESPONSE_CLASS).text(res.answer);
+    if(res.highlight) {
+      $(this).find("." + SEARCH_RESPONSE_CLASS).removeHighlight().highlight(res.highlight);
+    }
     $(this).fadeIn(300);
   });
-
 
 }
 
