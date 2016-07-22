@@ -1,5 +1,5 @@
 div#searchDiv {
-  position: absolute;
+  position: fixed;
   left: 78%;
   top: 125px;
   width: 220px;
@@ -50,6 +50,8 @@ div#searchDiv {
 
 .review_search_response{
   padding: 5px;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
 .search_response_wrapper{
